@@ -1,16 +1,12 @@
 class Main {
 
-  static function adder() {
-    return function(a:Int, b:Int) return a + b;
-  }
-
-  static function printer(f: (Int -> Int -> Int)) {
-    trace(f(1,2));
+  static function printer(text: String, f: (Int -> Int -> Int), a:Int, b:Int) {
+    trace(text + " " + f(a,b));
   } 
 
   static function main():Void {
-    var n = adder();
-    printer(n);
+    printer("addition", function(a:Int, b:Int) return a + b, 5, 6);
+    printer("multiply", function(a:Int, b:Int) return a * b, 5, 6);
   } 
 
 
