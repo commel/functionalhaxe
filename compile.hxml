@@ -1,0 +1,3 @@
+-main Main
+-cp .
+-neko app.n
